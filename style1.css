@@ -1,92 +1,333 @@
-*
-{
-    margin:0;
-    padding:0;
+* {
     text-decoration: none;
+    margin: 0;
+    padding: 0;
 }
-body
-{
-    margin:0;
-    padding:0;
+
+body {
+    margin: 0;
+    padding: 0;
     font-family: "Inter";
-    font-size:18px;
-    line-height:20px;
-    font-weight:400;
+    font-size: 18px;
+    line-height: 20px;
+    font-weight: 400;
     background-color: rgba(255, 255, 255, 1);
 }
-h1
-{
-    font-weight:600;
-    font-size:52px;
-    line-height:60px;
-    letter-spacing: -0.28px;
-}
-h2
-{
-    font-weight: 400;
-    font-size:24px;
-    line-height: 32px;
-}
-.button
-{
-    color:white;
+
+.button {
     padding: 12px 20px;
-    font-size:16px;
-    background-color: rgba(0, 113, 227, 1);
-    border-radius: 25px;  
+    font-size: 16px;
+    border-radius: 25px;
     letter-spacing: -0.37px;
+    background-color: transparent;
+    font-weight: 400;
+    margin-top: 20px;
 }
-header
-{
+
+.zai {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+}
+
+.blue {
+    background-color: rgba(0, 113, 227, 1);
+    color: white;
+}
+
+.white {
+    background-color: white;
+    color: black;
+}
+
+.borderW {
+    border: 1px solid white;
+    color: white;
+}
+
+.borderW:hover {
+    background-color: white;
+    color: black;
+}
+
+.borderB {
+    border: 1px solid rgba(0, 113, 227, 1);
+    color: rgba(0, 113, 227, 1);
+}
+
+.borderB:hover {
+    background-color: rgba(0, 113, 227, 1);
+    color: white;
+}
+
+header {
     background-color: rgba(245, 245, 247, 0.8);
 }
-nav
-{
-    width:1920px;
-    margin:0 auto;
-    height:44px;
-    font-size:12px;
+
+nav {
+    width: 1920px;
+    margin: 0 auto;
+    height: 44px;
+    font-size: 12px;
     line-height: 60px;
     display: flex;
-    gap:24px;
+    gap: 24px;
     align-items: center;
     justify-content: center;
 }
-nav a{
-    color:black;
+
+nav a {
+    color: black;
 }
-#top
-{
-    height:20px;
-    padding:16px 0px;
+
+#top {
+    height: 20px;
+    padding: 16px 0px;
     text-align: center;
-    font-size:14px;
+    font-size: 14px;
     line-height: 20px;
-    margin-bottom:0;
-    color:black;
+    margin-bottom: 0;
+    color: black;
 }
-section
-{
-    width:1920px;
-    margin:0 auto;
-    height:692px;
-    margin-bottom:12px;
-    color:white;
+
+section {
+    width: 1920px;
+    margin: 0 auto;
+    height: 692px;
+    margin-bottom: 12px;
+    color: white;
     text-align: center;
 }
 
-.bg1
-{
+section h1 {
+    font-weight: 600;
+    font-size: 52px;
+    letter-spacing: -0.28px;
+    line-height: 60px;
+    padding-top: 55px;
+}
+
+section h2 {
+    font-weight: 400;
+    font-size: 24px;
+    padding-top: 16px;
+    padding-bottom: 44px;
+}
+
+.bg1 {
     background-image: url(images/bg1.png);
     background-size: cover;
 }
-.bg2
-{
+
+.bg2 {
     background-image: url(images/bg2.png);
     background-size: cover;
 }
-.bg3
-{
+
+.bg3 {
     background-image: url(images/bg3.png);
     background-size: cover;
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 7px;
+    padding-top: 58px;
+}
+
+.center h3 {
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 100%;
+}
+
+h4 {
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 100%;
+    letter-spacing: 2px;
+}
+
+article {
+    width: 1920px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+}
+
+article .post {
+    width: 942px;
+    height: 580px;
+    text-align: center;
+}
+
+.figure1 {
+    background-image: url(images/Figure1.png);
+    background-size: cover;
+}
+
+.figure2 {
+    background-image: url(images/Figure2.png);
+    background-size: cover;
+}
+
+.figure3 {
+    background-image: url(images/Figure3.png);
+    background-size: cover;
+}
+
+.figure4 {
+    background-image: url(images/Figure4.png);
+    background-size: cover;
+}
+
+.figure5 {
+    background-image: url(images/Figure5.png);
+    background-size: cover;
+}
+
+.figure6 {
+    background-image: url(images/Figure6.png);
+    background-size: cover;
+}
+
+article h1 {
+    font-weight: 600;
+    font-size: 36px;
+    line-height: 44px;
+    color: black
+}
+
+article h2 {
+    font-size: 18px;
+    font-weight: 400;
+    color: black
+}
+
+.figure2 h1 {
+    color: white;
+}
+
+.figure2 h2 {
+    color: white;
+}
+
+.figure5 h2 {
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.slider-wrapper {
+    width: 100%;
+    overflow: hidden;
+    margin-top: 12px;
+    margin-bottom: 56px;
+}
+
+.slider {
+    display: flex;
+    width: calc((417px + 16px) * 16);
+    animation: scroll-left 50s linear infinite;
+}
+
+.slide {
+    flex: 0 0 417px;
+    height: 236px;
+    margin-right: 16px;
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+@keyframes scroll-left {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+.focus-tabs {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin: 20px 0;
+}
+
+.focus-tab {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: rgba(0, 0, 0, 0.4);
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+.focus-tab:hover {
+    background-color: rgba(0, 0, 0, 0.6);
+}
+.focus-tab.active {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.focus-slider-container {
+    position: relative;
+    width: 100%;
+    height: 668px;
+    margin-top:12px;
+    overflow: hidden;
+}
+
+.focus-slider-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.focus-slide {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.8);
+    width: 0;
+    opacity: 0;
+    transition: all 0.5s ease;
+    pointer-events: none;
+}
+
+.focus-slide img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.focus-slide.active {
+    width: 50vw;
+    opacity: 1;
+    z-index: 3;
+    transform: translate(-50%, -50%) scale(1);
+    pointer-events: auto;
+}
+
+.focus-slide.prev {
+    width: 25vw;
+    opacity: 0.5;
+    z-index: 2;
+    transform: translate(calc(-50% - 30vw), -50%) scale(0.95);
+}
+
+.focus-slide.next {
+    width: 25vw;
+    opacity: 0.5;
+    z-index: 2;
+    transform: translate(calc(-50% + 30vw), -50%) scale(0.95);
 }

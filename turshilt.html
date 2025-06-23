@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Image Tabs Center Focus</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: sans-serif;
+      background: #f0f0f0;
+    }
+
+    .focus-tabs {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      margin: 20px 0;
+    }
+
+    .focus-tab {
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background-color: rgba(0, 0, 0, 0.4);
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    .focus-tab.active {
+      background-color: rgba(0, 0, 0, 0.9);
+    }
+
+    .focus-slider-container {
+      position: relative;
+      width: 100%;
+      height: 400px;
+      overflow: hidden;
+    }
+
+    .focus-slider-inner {
+      position: relative;
+      width: 100%;
+      height: 100%;
+    }
+
+    .focus-slide {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%) scale(0.8);
+      width: 0;
+      opacity: 0;
+      transition: all 0.5s ease;
+      pointer-events: none;
+    }
+
+    .focus-slide img {
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    .focus-slide.active {
+      width: 50vw;
+      opacity: 1;
+      z-index: 3;
+      transform: translate(-50%, -50%) scale(1);
+      pointer-events: auto;
+    }
+
+    .focus-slide.prev {
+      width: 25vw;
+      opacity: 0.5;
+      z-index: 2;
+      transform: translate(calc(-50% - 30vw), -50%) scale(0.95);
+    }
+
+    .focus-slide.next {
+      width: 25vw;
+      opacity: 0.5;
+      z-index: 2;
+      transform: translate(calc(-50% + 30vw), -50%) scale(0.95);
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Tabs -->
+  <div class="focus-tabs" id="focusTabs"></div>
+
+  <!-- Slider -->
+  <div class="focus-slider-container">
+    <div class="focus-slider-inner" id="focusSlider">
+      <div class="focus-slide"><img src="images/snap1.jpg" alt=""></div>
+      <div class="focus-slide"><img src="images/snap2.jpg" alt=""></div>
+      <div class="focus-slide"><img src="images/snap3.jpg" alt=""></div>
+      <div class="focus-slide"><img src="images/slide1.jpg" alt=""></div>
+      <div class="focus-slide"><img src="images/slide2.png" alt=""></div>
+      <div class="focus-slide"><img src="images/slide3.jpg" alt=""></div>
+      <div class="focus-slide"><img src="images/slide4.jpg" alt=""></div>
+      <div class="focus-slide"><img src="images/slide1.jpg" alt=""></div>
+      <div class="focus-slide"><img src="images/slide2.png" alt=""></div>
+      <div class="focus-slide"><img src="images/slide3.jpg" alt=""></div>
+    </div>
+  </div>
+
+  <script>
+    const focusSlider = document.getElementById('focusSlider');
+    const focusSlides = focusSlider.querySelectorAll('.focus-slide');
+    const focusTabContainer = document.getElementById('focusTabs');
+
+    let currentFocusIndex = 0;
+    let autoSlideInterval = null;
+    let focusTabs = [];
+
+    // Auto-slide function
+    function startAutoSlide() {
+      stopAutoSlide(); // давхардахаас сэргийлнэ
+      autoSlideInterval = setInterval(() => {
+        let nextIndex = (currentFocusIndex + 1) % focusSlides.length;
+        setFocusSlide(nextIndex);
+      }, 4000); // 3 секунд тутамд
+    }
+
+    function stopAutoSlide() {
+      if (autoSlideInterval) {
+        clearInterval(autoSlideInterval);
+        autoSlideInterval = null;
+      }
+    }
+
+    function initFocusTabs() {
+      focusSlides.forEach((_, index) => {
+        const tab = document.createElement('div');
+        tab.className = 'focus-tab';
+        tab.addEventListener('click', () => {
+          stopAutoSlide(); // автомат гүйдгийг зогсооно
+          autoAdvanceTo(index); // дараалсан аним-г эхлүүлнэ
+        });
+        focusTabContainer.appendChild(tab);
+      });
+
+      focusTabs = document.querySelectorAll('.focus-tab');
+      setFocusSlide(0);
+      startAutoSlide();
+    }
+
+    // Слайдыг дараалсан effect-ээр гүйх
+    function autoAdvanceTo(targetIndex) {
+      const total = focusSlides.length;
+
+      if (targetIndex === currentFocusIndex) {
+        startAutoSlide();
+        return;
+      }
+
+      const stepDirection = (targetIndex > currentFocusIndex) ? 1 : -1;
+      const stepCount = Math.abs(targetIndex - currentFocusIndex);
+      let step = 0;
+
+      const fastInterval = setInterval(() => {
+        currentFocusIndex = (currentFocusIndex + stepDirection + total) % total;
+        setFocusSlide(currentFocusIndex);
+        step++;
+
+        if (currentFocusIndex === targetIndex || step >= stepCount) {
+          clearInterval(fastInterval);
+          startAutoSlide(); // авто-г дахин эхлүүлнэ
+        }
+      }, 200); // 200ms-ийн delay буюу хурдан гүйцэтгэл
+    }
+
+    function setFocusSlide(index) {
+      currentFocusIndex = index;
+
+      const total = focusSlides.length;
+      const prevIndex = (index - 1 + total) % total;
+      const nextIndex = (index + 1) % total;
+
+      focusSlides.forEach((slide, i) => {
+        slide.classList.remove('active', 'prev', 'next');
+        if (i === index) {
+          slide.classList.add('active');
+        } else if (i === prevIndex) {
+          slide.classList.add('prev');
+        } else if (i === nextIndex) {
+          slide.classList.add('next');
+        }
+      });
+
+      focusTabs.forEach((tab, i) => {
+        tab.classList.toggle('active', i === index);
+      });
+    }
+
+    window.addEventListener('DOMContentLoaded', initFocusTabs);
+  </script>
+
+</body>
+
+</html>
