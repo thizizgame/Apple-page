@@ -65,15 +65,16 @@ header {
 }
 
 nav {
-    width: 1920px;
+    max-width: 1920px;
+    width: 100%;
     margin: 0 auto;
     height: 44px;
     font-size: 12px;
     line-height: 60px;
     display: flex;
-    gap: 24px;
-    align-items: center;
     justify-content: center;
+    align-items: center;
+    gap: 24px;
 }
 
 nav a {
@@ -91,7 +92,8 @@ nav a {
 }
 
 section {
-    width: 1920px;
+    max-width: 1920px;
+    width: 100%;
     margin: 0 auto;
     height: 692px;
     margin-bottom: 12px;
@@ -116,17 +118,16 @@ section h2 {
 
 .bg1 {
     background-image: url(images/bg1.png);
-    background-size: cover;
 }
 
 .bg2 {
     background-image: url(images/bg2.png);
-    background-size: cover;
+
 }
 
 .bg3 {
     background-image: url(images/bg3.png);
-    background-size: cover;
+
 }
 
 .center {
@@ -151,7 +152,8 @@ h4 {
 }
 
 article {
-    width: 1920px;
+    max-width: 1920px;
+    width: 100%;
     margin: 0 auto;
     display: flex;
     flex-wrap: wrap;
@@ -160,39 +162,116 @@ article {
 }
 
 article .post {
-    width: 942px;
+    width: calc(50% - 6px);
     height: 580px;
     text-align: center;
 }
 
+.menu {
+    display: none;
+}
+
+@media (max-width:768px) {
+    article .post {
+        width: 100%;
+    }
+
+    nav {
+        display: none;
+    }
+
+    .menu {
+        display: block;
+    }
+
+    .space {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    #top {
+        width: 60%;
+        margin-bottom: 12px;
+    }
+}
+
+@media (max-width:390px) {
+    article {
+        flex-direction: column;
+    }
+
+    article .post {
+        width: 100%;
+    }
+
+    #top {
+        margin-bottom: 30px;
+        width: 80%;
+    }
+
+    section {
+        height: 500px;
+    }
+
+    .bg1 {
+        background-image: url(images/mobile2.jpg);
+    }
+
+    .bg1 h1 {
+        padding-top: 75%;
+        font-size: 30px;
+        line-height: 36px;
+        font-weight: 700;
+    }
+
+    .bg1 h2 {
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 120%;
+    }
+
+    .bg1 div {
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 20px;
+    }
+
+    .bg2 {
+        background-image: url(images/mobile1.jpg);
+
+    }
+    .bg3{
+        display: none;
+    }
+}
+
+.position {
+    background-size: cover;
+    background-position: center;
+}
+
 .figure1 {
     background-image: url(images/Figure1.png);
-    background-size: cover;
 }
 
 .figure2 {
     background-image: url(images/Figure2.png);
-    background-size: cover;
 }
 
 .figure3 {
     background-image: url(images/Figure3.png);
-    background-size: cover;
 }
 
 .figure4 {
     background-image: url(images/Figure4.png);
-    background-size: cover;
 }
 
 .figure5 {
     background-image: url(images/Figure5.png);
-    background-size: cover;
 }
 
 .figure6 {
     background-image: url(images/Figure6.png);
-    background-size: cover;
 }
 
 article h1 {
@@ -271,9 +350,11 @@ article h2 {
     cursor: pointer;
     transition: background-color 0.3s;
 }
+
 .focus-tab:hover {
     background-color: rgba(0, 0, 0, 0.6);
 }
+
 .focus-tab.active {
     background-color: rgba(0, 0, 0, 0.8);
 }
@@ -282,7 +363,7 @@ article h2 {
     position: relative;
     width: 100%;
     height: 668px;
-    margin-top:12px;
+    margin-top: 12px;
     overflow: hidden;
 }
 
