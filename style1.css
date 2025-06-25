@@ -5,8 +5,6 @@
 }
 
 body {
-    margin: 0;
-    padding: 0;
     font-family: "Inter";
     font-size: 18px;
     line-height: 20px;
@@ -171,79 +169,6 @@ article .post {
     display: none;
 }
 
-@media (max-width:768px) {
-    article .post {
-        width: 100%;
-    }
-
-    nav {
-        display: none;
-    }
-
-    .menu {
-        display: block;
-    }
-
-    .space {
-        display: flex;
-        justify-content: space-between;
-    }
-
-    #top {
-        width: 60%;
-        margin-bottom: 12px;
-    }
-}
-
-@media (max-width:390px) {
-    article {
-        flex-direction: column;
-    }
-
-    article .post {
-        width: 100%;
-    }
-
-    #top {
-        margin-bottom: 30px;
-        width: 80%;
-    }
-
-    section {
-        height: 500px;
-    }
-
-    .bg1 {
-        background-image: url(images/mobile2.jpg);
-    }
-
-    .bg1 h1 {
-        padding-top: 75%;
-        font-size: 30px;
-        line-height: 36px;
-        font-weight: 700;
-    }
-
-    .bg1 h2 {
-        font-size: 18px;
-        font-weight: 400;
-        line-height: 120%;
-    }
-
-    .bg1 div {
-        font-size: 14px;
-        font-weight: 400;
-        line-height: 20px;
-    }
-
-    .bg2 {
-        background-image: url(images/mobile1.jpg);
-
-    }
-    .bg3{
-        display: none;
-    }
-}
 
 .position {
     background-size: cover;
@@ -411,4 +336,116 @@ article h2 {
     opacity: 0.5;
     z-index: 2;
     transform: translate(calc(-50% + 30vw), -50%) scale(0.95);
+}
+
+@media (max-width:768px) {
+    
+
+    nav {
+        display: none;
+    }
+
+    .menu {
+        display: block;
+    }
+
+    .space {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    #top {
+        width: 60%;
+        margin-bottom: 12px;
+    }
+    .bg3{
+        display: none;
+    }
+    .figure1
+    {
+        
+    }
+    .figure2
+    {
+        display: none;
+    }
+}
+@media (max-width:390px) {
+    article {
+        flex-direction: column;
+    }
+
+    article .post {
+        width: 100%;
+    }
+
+    #top {
+        margin-bottom: 30px;
+        width: 80%;
+    }
+
+    section {
+        height: 500px;
+    }
+
+    .bg1 {
+        background-image: url(images/mobile2.jpg);
+    }
+
+    section h1 {
+        padding-top: 320px;
+        font-size: 30px;
+        font-weight: 700;
+        line-height:40px;
+    }
+
+    section h2 {
+        font-size: 18px;
+        font-weight: 400;
+        line-height:0px;
+    }
+
+    section div {
+        font-size: 14px;
+        font-weight: 400;
+    }
+    .bg1 a {
+        margin-right:12px;
+    }
+    .bg2 a{
+        margin-right:12px;
+    }
+    .bg2 h1
+    {
+        padding-top:36px;   
+    }
+    article h1
+    {
+        font-size: 30px;
+        line-height: 40px;
+        font-weight: 700;
+    }
+    article h2
+    {
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 120%;
+    }
+    .zai
+    {
+        gap:12px;
+    }
+    .button{
+        font-size:14px;
+        line-height: 14px;
+        font-weight:400;
+        padding:8 16px;
+    }
+    .bg2 {
+        background-image: url(images/mobile1.jpg);
+
+    }
+    .bg3{
+        display: none;
+    }
 }
