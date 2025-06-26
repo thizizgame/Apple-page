@@ -71,7 +71,7 @@
             <a href="#" class="button blue" class="zai">Shop gifts</a>
         </section>
         <article>
-            <div class="post figure1 position">
+            <div class="post1 figure1 position">
                 <img src="images/Heading 3.png" style="padding-top:58px;padding-bottom:9px;max-width:433px;width:100%;">
                 <h2>Two sizes. Faster chip. Does it all.</h2>
                 <div class="zai">
@@ -88,6 +88,20 @@
                 </div>
 
             </div>
+            <div class="post figure7 position">
+                <h1 style="padding-top:287px;color:white;">AirPods Pro 4</h1>
+                <h2 style="color:white;text-align: center;padding:0 15px;">
+                    Iconic. Now supersonic.
+                    Available with Active Noise
+                    Cancellation.2</h2>
+                <div class="zai">
+                    <a href="#" class="button blue">Learn more</a>
+                    <a href="#" class="button borderB">Buy</a>
+                </div>
+
+            </div>
+
+
             <div class="post figure3 position">
                 <div class="center">
                     <img src="images/Vector.png" width="26.35px" height="32px">
@@ -108,6 +122,30 @@
                     <a href="#" class="button borderB">Buy</a>
                 </div>
             </div>
+
+            <div class="post figure8 position">
+                <h1 style="padding-top:41px;">Apple for<br>
+                    Small Business</h1>
+                <h2>Hardware, software, and <br>expert help - all in one place.</h2>
+                <div class="zai">
+                    <a href="#" class="button blue">Learn more</a>
+
+                </div>
+            </div>
+
+            <div class="post figure9 position">
+                <h1 style="padding-top:296px;">Carrier deals at Apple</h1>
+                <h2 style="padding:15px 45px;">Get up to $1000 in credit on
+                    a new iPhone. Trade-in may
+                    <br>be required.
+                </h2>
+                <div class="zai">
+                    <a href="#" class="button blue">Find your deal</a>
+
+                </div>
+            </div>
+
+
             <div class="post figure5 position">
                 <div class="center">
                     <img src="images/Vector.png" width="26.35px">
@@ -116,9 +154,7 @@
 
                 <h2 style="margin-top:12px;">Get $180-$650 in credit when you</h2>
                 <h2 style="margin-bottom:24px;">trade in iPhone 12 or higher.3</h2>
-
                 <a href="#" class="button blue">Get your estimate</a>
-
 
             </div>
             <div class="post figure6 position">
@@ -134,119 +170,22 @@
                     <a href="#" class="button borderB">Apply now</a>
                 </div>
             </div>
+
         </article>
 
-
-        <!-- Slider -->
-        <div class="focus-slider-container">
-            <div class="focus-slider-inner" id="focusSlider">
-                <div class="focus-slide"><img src="images/snap1.jpg" alt=""></div>
-                <div class="focus-slide"><img src="images/snap2.jpg" alt=""></div>
-                <div class="focus-slide"><img src="images/snap3.jpg" alt=""></div>
-                <div class="focus-slide"><img src="images/slide1.jpg" alt=""></div>
-                <div class="focus-slide"><img src="images/slide4.png" alt=""></div>
-                <div class="focus-slide"><img src="images/slide3.jpg" alt=""></div>
-                <div class="focus-slide"><img src="images/slide2.jpg" alt=""></div>
-                <div class="focus-slide"><img src="images/slide1.jpg" alt=""></div>
-                <div class="focus-slide"><img src="images/slide2.png" alt=""></div>
-                <div class="focus-slide"><img src="images/slide3.jpg" alt=""></div>
-            </div>
-        </div>
-        <div class="focus-tabs" id="focusTabs"></div>
-        <script>
-            const focusSlider = document.getElementById('focusSlider');
-            const focusSlides = focusSlider.querySelectorAll('.focus-slide');
-            const focusTabContainer = document.getElementById('focusTabs');
-
-            let currentFocusIndex = 0;
-            let autoSlideInterval = null;
-            let focusTabs = [];
-
-            // Auto-slide function
-            function startAutoSlide() {
-                stopAutoSlide(); // давхардахаас сэргийлнэ
-                autoSlideInterval = setInterval(() => {
-                    let nextIndex = (currentFocusIndex + 1) % focusSlides.length;
-                    setFocusSlide(nextIndex);
-                }, 3000); // 3 секунд тутамд
-            }
-
-            function stopAutoSlide() {
-                if (autoSlideInterval) {
-                    clearInterval(autoSlideInterval);
-                    autoSlideInterval = null;
-                }
-            }
-
-            function initFocusTabs() {
-                focusSlides.forEach((_, index) => {
-                    const tab = document.createElement('div');
-                    tab.className = 'focus-tab';
-                    tab.addEventListener('click', () => {
-                        stopAutoSlide(); // автомат гүйдгийг зогсооно
-                        autoAdvanceTo(index); // дараалсан аним-г эхлүүлнэ
-                    });
-                    focusTabContainer.appendChild(tab);
-                });
-
-                focusTabs = document.querySelectorAll('.focus-tab');
-                setFocusSlide(0);
-                startAutoSlide();
-            }
-
-            // Слайдыг дараалсан effect-ээр гүйх
-            function autoAdvanceTo(targetIndex) {
-                const total = focusSlides.length;
-
-                if (targetIndex === currentFocusIndex) {
-                    startAutoSlide();
-                    return;
-                }
-
-                const stepDirection = (targetIndex > currentFocusIndex) ? 1 : -1;
-                const stepCount = Math.abs(targetIndex - currentFocusIndex);
-                let step = 0;
-
-                const fastInterval = setInterval(() => {
-                    currentFocusIndex = (currentFocusIndex + stepDirection + total) % total;
-                    setFocusSlide(currentFocusIndex);
-                    step++;
-
-                    if (currentFocusIndex === targetIndex || step >= stepCount) {
-                        clearInterval(fastInterval);
-                        startAutoSlide(); // авто-г дахин эхлүүлнэ
-                    }
-                }, 200); // 200ms-ийн delay буюу хурдан гүйцэтгэл
-            }
-
-            function setFocusSlide(index) {
-                currentFocusIndex = index;
-
-                const total = focusSlides.length;
-                const prevIndex = (index - 1 + total) % total;
-                const nextIndex = (index + 1) % total;
-
-                focusSlides.forEach((slide, i) => {
-                    slide.classList.remove('active', 'prev', 'next');
-                    if (i === index) {
-                        slide.classList.add('active');
-                    } else if (i === prevIndex) {
-                        slide.classList.add('prev');
-                    } else if (i === nextIndex) {
-                        slide.classList.add('next');
-                    }
-                });
-
-                focusTabs.forEach((tab, i) => {
-                    tab.classList.toggle('active', i === index);
-                });
-            }
-
-            window.addEventListener('DOMContentLoaded', initFocusTabs);
-        </script>
-
-
         <footer>
+            <div class="focus-slides-container">
+                <div class="focus-slides">
+                    <div class="focus-slide slide-bg1 position"></div>
+                    <div class="focus-slide slide-bg2 position"></div>
+                    <div class="focus-slide slide-bg3 position"></div>
+                    <div class="focus-slide slide-bg4 position"></div>
+                    <div class="focus-slide slide-bg5 position"></div>
+                    <div class="focus-slide slide-bg6 position"></div>
+                    <div class="focus-slide slide-bg7 position"></div>
+                    <div class="focus-slide slide-bg8 position"></div>
+                </div>
+            </div>
             <div class="slider-wrapper">
                 <div class="slider">
 

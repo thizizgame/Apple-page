@@ -6,7 +6,7 @@
 
 body {
     font-family: "Inter";
-    font-size: 18px;
+    font-size: 18px;    
     line-height: 20px;
     font-weight: 400;
     background-color: rgba(255, 255, 255, 1);
@@ -164,6 +164,11 @@ article .post {
     height: 580px;
     text-align: center;
 }
+article .post1 {
+    width: calc(50% - 6px);
+    height: 580px;
+    text-align: center;
+}
 
 .menu {
     display: none;
@@ -260,84 +265,51 @@ article h2 {
     }
 }
 
-.focus-tabs {
+.figure7
+{
+    display: none;
+    color:white;
+    text-align: center;
+}
+.figure8
+{
+    display: none;
+}
+.figure9
+{
+    display: none;
+}
+.focus-slides-container
+{
+    width:100%;
+    overflow: scroll;
+    margin-top:12px;
+    scroll-snap-type: x proximity;
+}
+.focus-slides
+{
     display: flex;
-    justify-content: center;
-    gap: 10px;
-    margin: 20px 0;
+    gap:16px;
+    width:10000px;   
 }
-
-.focus-tab {
-    width: 8px;
-    height: 8px;
-    border-radius: 50%;
-    background-color: rgba(0, 0, 0, 0.4);
-    cursor: pointer;
-    transition: background-color 0.3s;
+.focus-slide
+{
+    width:1250px;
+    height:668px;
+    box-sizing: border-box;
 }
-
-.focus-tab:hover {
-    background-color: rgba(0, 0, 0, 0.6);
+.slide-bg1
+{
+    background-image: url(images/snap1.jpg);
 }
-
-.focus-tab.active {
-    background-color: rgba(0, 0, 0, 0.8);
+.slide-bg2
+{
+    background-image: url(images/snap2.jpg);
 }
-
-.focus-slider-container {
-    position: relative;
-    width: 100%;
-    height: 668px;
-    margin-top: 12px;
-    overflow: hidden;
+.slide-bg3
+{
+    background-image: url(images/snap3.jpg);
 }
-
-.focus-slider-inner {
-    position: relative;
-    width: 100%;
-    height: 100%;
-}
-
-.focus-slide {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%) scale(0.8);
-    width: 0;
-    opacity: 0;
-    transition: all 0.5s ease;
-    pointer-events: none;
-}
-
-.focus-slide img {
-    width: 100%;
-    height: auto;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-}
-
-.focus-slide.active {
-    width: 50vw;
-    opacity: 1;
-    z-index: 3;
-    transform: translate(-50%, -50%) scale(1);
-    pointer-events: auto;
-}
-
-.focus-slide.prev {
-    width: 25vw;
-    opacity: 0.5;
-    z-index: 2;
-    transform: translate(calc(-50% - 30vw), -50%) scale(0.95);
-}
-
-.focus-slide.next {
-    width: 25vw;
-    opacity: 0.5;
-    z-index: 2;
-    transform: translate(calc(-50% + 30vw), -50%) scale(0.95);
-}
-
 @media (max-width:768px) {
     
 
@@ -361,13 +333,48 @@ article h2 {
     .bg3{
         display: none;
     }
-    .figure1
+   article  .post1
     {
-        
+        width:100%;
+    }
+    .figure3
+    {
+        background-image: url(images/watch.jpg);
     }
     .figure2
     {
         display: none;
+    }
+    .figure7
+    {
+        background-image: url(images/airpod.jpg);
+        display: block;
+    }
+    .figure8
+    {
+        background-image: url(images/small.png);
+        display: block;
+    }
+    .figure6{
+        display: none;
+    }
+    .figure9{
+        display: block;
+        background-image: url(images/carrier.jpg);
+    }
+    .focus-slides{
+        width:5600px;
+    }
+    .focus-slide{
+        width:689px;
+        height:368px;
+        gap:12px;
+    }
+    .slide-bg1{
+        background-image: url(images/slide-tablet-bg2.jpg);
+    }
+    .slide-bg2{
+        background-image: url(images/slide-tablet-bg1.jpg);
     }
 }
 @media (max-width:390px) {
@@ -447,5 +454,37 @@ article h2 {
     }
     .bg3{
         display: none;
+    }
+    .focus-slides{
+        width:2300px;
+    }
+    .focus-slide{
+        width:274px;
+        height:495px;
+        gap:12px;
+    }
+    .slide-bg1{
+        background-image: url(images/slide-bg8.jpg);
+    }
+    .slide-bg2{
+        background-image: url(images/slide-bg1.jpg);
+    }
+    .slide-bg3{
+        background-image: url(images/slide-bg3.jpg);
+    }
+    .slide-bg4{
+        background-image: url(images/slide-bg4.jpg);
+    }
+    .slide-bg5{
+        background-image: url(images/slide-bg5.jpg);
+    }
+    .slide-bg6{
+        background-image: url(images/slide-bg6.jpg);
+    }
+    .slide-bg7{
+        background-image: url(images/slide-bg7.jpg);
+    }
+    .slide-bg8{
+        background-image: url(images/slide-bg2.jpg);
     }
 }
