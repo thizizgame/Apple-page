@@ -205,6 +205,24 @@ section {
     padding-top:71px;
     position: relative;
 }
+.uur
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    color:rgba(29, 29, 31, 1);
+    font-size:22px;
+    line-height: 28px;
+    font-weight: 700;
+    height:500px;
+}
+.halit
+{
+    background-color: rgba(255, 255, 255, 1);
+    border-radius: 18px;
+    box-shadow: 2px 4px 12px rgba(0, 0, 0, 0.08);
+    height:240px;
+}
 .ulaanbichig
 {
     font-size: 12px;
@@ -248,4 +266,19 @@ section {
     line-height: 18px;
     padding-top:32px;
     color:rgba(29, 29, 31, 1);
+}
+.hungun
+{
+    color:rgba(110, 110, 115, 1);
+    font-size:12px;
+    line-height: 16px;
+    font-weight: 700;
+    padding-bottom:9px;
+}
+.zun
+{
+    color:rgba(29, 29, 31, 1);
+    font-size: 17px;
+    font-weight: 400;
+    line-height: 20px;
 }
