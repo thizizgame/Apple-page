@@ -310,7 +310,7 @@ article h2 {
 {
     background-image: url(images/snap3.jpg);
 }
-@media (max-width:768px) {
+@media (max-width:960px) {
     
 
     nav {
@@ -377,7 +377,7 @@ article h2 {
         background-image: url(images/slide-tablet-bg1.jpg);
     }
 }
-@media (max-width:390px) {
+@media (max-width:540px) {
     article {
         flex-direction: column;
     }

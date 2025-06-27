@@ -161,10 +161,17 @@ section {
 }
 .snapbox-container
 {
-    padding-left:140px;
     width:100%;
+    overflow: scroll;  
+    height:515px;
+    padding-left:140px;
+}
+.snapbox-maxhemjee
+{
     display: flex;
-    gap:20px;
+    gap: 20px;
+    width:5000px;
+    margin-top:10px;
 }
 .snapbox
 {
@@ -174,6 +181,7 @@ section {
     background-color: rgba(255, 255, 255, 1);
     border-radius: 18px;
     box-shadow: 2px 4px 12px rgba(0, 0, 0, 0.08);
+    box-sizing: border-box;
 }
 .snapbox img
 {
@@ -281,4 +289,25 @@ section {
     font-size: 17px;
     font-weight: 400;
     line-height: 20px;
+}
+.footer
+{
+    display: flex;
+    gap:12px;   
+    padding-left:140px;
+    color:rgba(29, 29, 31, 1);
+    align-items:center;
+    padding-bottom:100px;
+}
+.footer img
+{
+    margin-left:8px;
+}
+.footer p{
+    border-radius:25px;
+    padding:10px 12px;
+    border:1px solid rgba(29, 29, 31, 1);
+    font-size:14px;
+    line-height:20px;
+    font-weight:400;
 }
