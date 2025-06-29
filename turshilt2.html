@@ -1,0 +1,741 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Apple Store Online - Apple</title>
+  <link rel="stylesheet" href="style2.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet" />
+    <style>
+        * {
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Inter";
+    font-size: 18px;
+    line-height: 20px;
+    font-weight: 400;
+    background-color: rgba(255, 255, 255, 1);
+}
+
+.button {
+    padding: 12px 20px;
+    font-size: 16px;
+    border-radius: 25px;
+    letter-spacing: -0.37px;
+    background-color: transparent;
+    font-weight: 400;
+    margin-top: 20px;
+}
+
+.zai {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+}
+
+.blue {
+    background-color: rgba(0, 113, 227, 1);
+    color: white;
+}
+
+.white {
+    background-color: white;
+    color: black;
+}
+
+.borderW {
+    border: 1px solid white;
+    color: white;
+}
+
+.borderW:hover {
+    background-color: white;
+    color: black;
+}
+
+.borderB {
+    border: 1px solid rgba(0, 113, 227, 1);
+    color: rgba(0, 113, 227, 1);
+}
+
+.borderB:hover {
+    background-color: rgba(0, 113, 227, 1);
+    color: white;
+}
+
+header {
+    background-color: rgba(245, 245, 247, 0.8);
+}
+
+nav {
+    width: 1920px;
+    margin: 0 auto;
+    height: 44px;
+    font-size: 12px;
+    line-height: 60px;
+    display: flex;
+    gap: 24px;
+    align-items: center;
+    justify-content: center;
+}
+
+nav a {
+    color: black;
+}
+
+#top {
+    height: 20px;
+    padding: 16px 0px;
+    text-align: center;
+    font-size: 14px;
+    line-height: 20px;
+    margin-bottom: 0;
+    color: black;
+}
+
+section {
+    max-width: 1920px;
+    width:100%;
+    margin: 0 auto;
+    color: white;
+    text-align: center;
+}
+
+.giftmagic {
+    
+    height: 100px;
+    font-size: 44px;
+    font-weight: 700;
+    line-height: 52.01px;
+    color:rgba(110, 110, 115, 1);
+    text-align: left;
+}
+.header-contuct
+{
+    display: flex;
+    justify-content: space-between;
+    padding:0px 140px;
+}
+.header-ask
+{
+    font-size:14px;
+    font-weight: 700;
+    line-height:20px;
+    color:rgba(29, 29, 31, 1);
+
+}
+.gradient {
+    background: -webkit-linear-gradient(rgba(0, 144, 247, 1), rgba(186, 98, 252, 1),rgba(242, 65, 107, 1));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.menu-box
+{
+    display: flex;
+    gap:12px;
+    margin-top:80px;
+    margin-left:140px;
+    color:rgba(29, 29, 31, 1);
+    font-size:14px;
+    font-weight:700;
+    line-height: 20px;
+}
+.menu-box img
+{
+    width:120px;
+    height:78px;
+    padding: 8px 16px;
+}
+.image-menu
+{
+    width:136px;
+    height:146px;
+}
+.garchig
+{
+    color:rgba(110, 110, 115, 1);
+    font-size:24px;
+    line-height: 32px;
+    font-weight:700;
+    text-align: left;
+    padding-left:140px;
+    padding-top:80px;
+    margin-bottom:20px;
+}
+.snapbox-container
+{
+    width:100%;
+    overflow: scroll;  
+    padding-left:140px;
+}
+.snapbox-maxhemjee
+{
+    display: flex;
+    gap: 20px;
+    width:5000px;
+    height:510px;
+    margin-top:10px;
+}
+.snapbox
+{
+    width: 480px;
+    height: 500px;
+    position: relative;
+    background-color: rgba(255, 255, 255, 1);
+    border-radius: 18px;
+    box-shadow: 2px 4px 12px rgba(0, 0, 0, 0.08);
+    box-sizing: border-box;
+}
+.snapbox img
+{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 18px;
+}
+.ehnii
+{
+    width:400px;
+    height:500px;
+}
+.ehnii img
+{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 18px;
+}
+.store
+{   
+    width:313px;
+    height: 500px;
+}
+.store img{
+    width:230px;
+    height:230px;
+    padding-top:71px;
+    position: relative;
+}
+.uur
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    color:rgba(29, 29, 31, 1);
+    font-size:22px;
+    line-height: 28px;
+    font-weight: 700;
+    height:500px;
+}
+.halit
+{
+    background-color: rgba(255, 255, 255, 1);
+    border-radius: 18px;
+    box-shadow: 2px 4px 12px rgba(0, 0, 0, 0.08);
+    height:240px;
+}
+.ulaanbichig
+{
+    font-size: 12px;
+    color:rgba(182, 68, 0, 1);
+    font-weight: 700;
+    line-height: 16px;
+    padding-bottom:9px;
+}
+.harbichig
+{
+    font-size: 26px;
+    color:rgba(29, 29, 31, 1);
+    font-weight: 700;
+    line-height: 32px;
+    padding-bottom: 12px;
+}
+.zugeerbichig
+{
+    font-size: 18px;
+    color:rgba(29, 29, 31, 1);
+    font-weight: 400;
+    line-height: 20px;
+}
+.posi
+{
+    position:absolute;
+    left:30px;
+    top:30px;
+    text-align: left;
+}
+.store .harbichig
+{
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 20px;
+}
+.store .zugeerbichig{
+    
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 18px;
+    padding-top:32px;
+    color:rgba(29, 29, 31, 1);
+}
+.hungun
+{
+    color:rgba(110, 110, 115, 1);
+    font-size:12px;
+    line-height: 16px;
+    font-weight: 700;
+    padding-bottom:9px;
+}
+.zun
+{
+    color:rgba(29, 29, 31, 1);
+    font-size: 17px;
+    font-weight: 400;
+    line-height: 20px;
+}
+.footer
+{
+    display: flex;
+    gap:12px;   
+    padding-left:140px;
+    color:rgba(29, 29, 31, 1);
+    align-items:center;
+    padding-bottom:100px;
+}
+.footer img
+{
+    margin-left:8px;
+}
+.footer p{
+    border-radius:25px;
+    padding:10px 12px;
+    border:1px solid rgba(29, 29, 31, 1);
+    font-size:14px;
+    line-height:20px;
+    font-weight:400;
+}
+
+    </style>
+</head>
+
+<body>
+  <header>
+    <nav>
+      <a href="index.html"><img src="images/logo.png"></a>
+      <a href="store.html">Store</a>
+      <a href="#">Mac</a>
+      <a href="#">IPad</a>
+      <a href="#">IPhone</a>
+      <a href="#">Watch</a>
+      <a href="#">Vision</a>
+      <a href="#">Airpods</a>
+      <a href="#">TV & Home</a>
+      <a href="#">Entertaiment</a>
+      <a href="#">Accessories</a>
+      <a href="#">Support</a>
+      <a href="search"><img src="images/search.png"></a>
+      <a href="store"><img src="images/store.png"></a>
+    </nav>
+  </header>
+  <main>
+    <section id="top">
+      Pay monthly at 0% APR when you choose to check out with Apple Card Monthly Installments.
+    </section>
+    <section
+      style="width:100%;height:75px;background-image: url(images/bg4.png);background-size: cover;margin-bottom:80px;">
+    </section>
+    <section class="giftmagic">
+      <div class="header-contuct">
+        <div><a href="#" class="gradient">Store. </a> Gift magic this holiday.</div>
+        <div class="header-ask">
+          <div style="display: flex;align-items: center;gap:16px;">
+            <img src="images/profile.jpg" width="35px">
+            Need shopping help?
+          </div>
+
+
+          <p>Ask a Specialist</p>
+          Visit an Apple Store<br>
+          <p>Find one near you</p>
+
+        </div>
+      </div>
+
+
+
+    </section>
+    <section>
+      <div class="menu-box">
+        <div class="image-menu"><img src="images/menu-img1.png">Mac</div>
+        <div class="image-menu"><img src="images/menu-img2.png">iPhone</div>
+        <div class="image-menu"><img src="images/menu-img3.png">iPad</div>
+        <div class="image-menu"><img src="images/menu-img4.png">Apple Watch</div>
+        <div class="image-menu"><img src="images/menu-img5.png">Apple Vision Pro</div>
+        <div class="image-menu"><img src="images/menu-img6.png">Airpods</div>
+        <div class="image-menu"><img src="images/menu-img7.png">AirTag</div>
+        <div class="image-menu"><img src="images/menu-img8.png">Apple TV 4k</div>
+        <div class="image-menu"><img src="images/menu-img9.png">Homepad</div>
+        <div class="image-menu"><img src="images/menu-img10.png">Accessories</div>
+        <div class="image-menu"><img src="images/menu-img11.png">Apple Gift Card</div>
+
+      </div>
+    </section>
+    <section>
+
+      <div class="garchig">
+        <a href="#" class="gradient">The latest. </a> Let them unwrap wonders
+      </div>
+      <div class="snapbox-container">
+        <div class="snapbox-maxhemjee">
+          <div class="snapbox">
+            <img src="images/storebox1.jpg">
+            <div class="posi">
+              <p class="ulaanbichig">APPLE INTELLIGENCE</p>
+              <p class="harbichig">iPhone 16 Pro</p>
+              <p class="zugeerbichig">From $999 or $41.62/mo. for 24 mo.*</p>
+            </div>
+
+          </div>
+          <div class="snapbox">
+            <img src="images/storebox2.jpg">
+            <div class="posi">
+              <p class="ulaanbichig">APPLE INTELLIGENCE</p>
+              <p class="harbichig">Apple Watch Series 10</p>
+              <p class="zugeerbichig">From $399 or $33.25/mo. for 12 mo.</p>
+            </div>
+          </div>
+          <div class="snapbox">
+            <img src="images/storebox3.jpg">
+            <div class="posi">
+              <p class="ulaanbichig">APPLE INTELLIGENCE</p>
+              <p class="harbichig">iPad mini</p>
+              <p class="zugeerbichig">From $499 or $41.58/mo. for 12 mo.</p>
+            </div>
+          </div>
+          <div class="snapbox">
+            <img src="images/storebox4.jpg">
+            <div class="posi">
+              <p class="ulaanbichig">APPLE INTELLIGENCE</p>
+              <p class="harbichig">MacBook Pro</p>
+              <p class="zugeerbichig">From $1599 or $133.25/mo. for 12 mo.</p>
+            </div>
+          </div>
+        </div>
+
+
+      </div>
+
+    </section>
+    <section>
+
+      <div class="garchig">
+        <a href="#" class="gradient">Personalization. </a> Let them unwrap wonders.
+      </div>
+      <div class="snapbox-container">
+        <div class="snapbox-maxhemjee">
+          <div class="snapbox ehnii">
+            <img src="images/storebox5.jpg">
+            <div class="posi" style="top:53px;">
+
+              <p class="harbichig">Make their gift<br>
+                one of a kind.</p>
+
+            </div>
+          </div>
+          <div class="snapbox store">
+            <img src="images/storebox6.jpg">
+            <div class="posi" style="top:359px;">
+              <p class="ulaanbichig">Free Engraving</p>
+              <p class="harbichig hemjee">AirPods Max - Purple</p>
+              <p class="zugeerbichig">$549.00</p>
+            </div>
+          </div>
+          <div class="snapbox store">
+            <img src="images/storebox7.jpg">
+            <div class="posi" style="top:359px;">
+              <p class="ulaanbichig">Free Engraving</p>
+              <p class="harbichig hemjee">AirPods Pro 2</p>
+              <p class="zugeerbichig">$249.00</p>
+            </div>
+          </div>
+          <div class="snapbox store">
+            <img src="images/storebox8.jpg">
+            <div class="posi" style="top:359px;">
+              <p class="ulaanbichig">Free Engraving</p>
+              <p class="harbichig hemjee">AirPods 4 with Active Noise Cancellation</p>
+              <p class="zugeerbichig" style="padding-top:12px;">$179.00</p>
+            </div>
+          </div>
+          <div class="snapbox store">
+            <img src="images/storebox9.jpg">
+            <div class="posi" style="top:359px;">
+              <p class="ulaanbichig">Free Engraving</p>
+              <p class="harbichig hemjee">Apple Pencil Pro</p>
+              <p class="zugeerbichig">$49.00</p>
+            </div>
+          </div>
+        </div>
+
+
+
+      </div>
+    </section>
+    <section>
+
+      <div class="garchig">
+        <a href="#" class="gradient">Holiday Picks. </a> Add more magic to the moment.
+      </div>
+      <div class="snapbox-container">
+        <div class="snapbox-maxhemjee">
+          <div class="snapbox ehnii">
+            <img src="images/storebox10.jpg">
+            <div class="posi" style="top:53px;">
+
+              <p class="harbichig">Surprise your favorites <br>with these favorites.</p>
+
+            </div>
+          </div>
+          <div class="snapbox store">
+            <img src="images/storebox11.jpg">
+            <div class="posi" style="top:359px;">
+              <p class="ulaanbichig">New</p>
+              <p class="harbichig hemjee">iPhone 16 Silicone Case with MagSafe - Star Fruit</p>
+              <p class="zugeerbichig">$49.00</p>
+            </div>
+
+          </div>
+          <div class="snapbox store">
+            <img src="images/storebox12.jpg">
+            <div class="posi" style="top:359px;">
+              <p class="ulaanbichig"></p>
+              <p class="harbichig hemjee">HomePod mini - White<br></p>
+              <p class="zugeerbichig">$99.00</p>
+            </div>
+          </div>
+
+          <div class="snapbox store">
+            <img src="images/storebox13.jpg">
+            <div class="posi" style="top:359px;">
+
+              <p class="harbichig hemjee">Smart Folio for iPad Air 11 - inch (M2) - Sage</p>
+              <p class="zugeerbichig">$79.00</p>
+            </div>
+          </div>
+
+          <div class="snapbox store">
+            <img src="images/storebox14.jpg">
+            <div class="posi" style="top:359px;">
+              <p class="ulaanbichig"> </p>
+              <p class="harbichig hemjee">Beats Solo 4 - On-Ear Wireless Headphones - Slate Blue</p>
+              <p class="zugeerbichig">$79.00</p>
+            </div>
+
+          </div>
+        </div>
+
+
+
+      </div>
+    </section>
+    <section>
+
+      <div class="garchig">
+        <a href="#" class="gradient">Only at Apple. </a> With you every step of the holiday
+      </div>
+      <div class="snapbox-container">
+        <div class="snapbox-maxhemjee">
+          <div class="snapbox">
+            <img src="images/storebox15.jpg">
+            <div class="posi" style="top:50px;">
+
+              <p class="harbichig">Get gifts in time for the <br>holidays with two hour<br>delivery,² free
+                <br>delivery,or
+                easy pickup.
+              </p>
+
+            </div>
+          </div>
+          <div class="store uur">
+            <div class="halit">
+              <p style="padding-top:82px">Customize your Mac<br>
+                and create your own<br>
+                style of Apple Watch.
+              </p>
+
+            </div>
+            <div class="halit">
+              <p style="padding-top:68px;">
+                Pay in full or pay<br> over time. Your<br> choice.
+              </p>
+            </div>
+          </div>
+          <div class="store uur">
+            <div class="halit">
+              <p style="padding-top:82px">
+                Free extended<br> returns between now<br> and 1/8/25.
+              </p>
+            </div>
+            <div class="halit">
+              <p style="padding-top:68px;">
+                Make them yours.<br>
+                Engrave a mix of <br>emoji, names, and<br> numbers for free.
+              </p>
+            </div>
+          </div>
+          <div class="snapbox">
+            <img src="images/storebox16.jpg">
+            <div class="posi">
+              <p class="hungun">APPLE TRADE IN</p>
+              <p class="harbichig">Trade in your current<br>
+                device. Get credit toward a <br>new one.³</p>
+
+            </div>
+          </div>
+          <div class="snapbox">
+            <img src="images/storebox17.jpg">
+            <div class="posi">
+              <p class="hungun">APPLE SPECIALIST</p>
+              <p class="harbichig">Find gifts with an Apple<br>
+                Specialist in a store or online.</p>
+
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+    <section>
+
+      <div class="garchig">
+        <a href="#" class="gradient">The Apple Experience. </a> Even more awe in store.
+      </div>
+      <div class="snapbox-container">
+        <div class="snapbox-maxhemjee">
+          <div class="snapbox">
+            <img src="images/storebox18.jpg">
+            <div class="posi">
+              <p class="hungun">APPLE MUSIC</p>
+              <p class="harbichig">Get 3 months of<br>
+                Apple Music free.</p>
+              <p class="zun">
+                Included with the purchase of<br>
+                select Apple devices.
+              </p>
+            </div>
+          </div>
+          <div class="snapbox">
+            <img src="images/storebox19.png">
+            <div class="posi">
+              <p class="hungun" style="color:rgba(245, 245, 247, 1);">APPLE TV+</p>
+              <p class="harbichig" style="color:rgba(255, 255, 255, 1);">Get 3 months free when you buy<br> an Apple
+                device.</p>
+
+            </div>
+          </div>
+          <div class="snapbox">
+            <img src="images/storebox20.jpg">
+            <div class="posi" style="top:50px;">
+
+              <p class="harbichig">Six Apple services.
+                One easy subscription.</p>
+
+            </div>
+          </div>
+          <div class="snapbox">
+            <img src="images/storebox21.jpg">
+            <div class="posi">
+              <p class="hungun">APPLE INTELLIGENCE</p>
+              <p class="harbichig">New features for writing, <br>focus,communication, and <br>more.</p>
+
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+    <section>
+
+      <div class="garchig">
+        <a href="#" class="gradient">Special Savings.</a> iPhone carrier deals and exclusive savings for
+        school,<br>businesses, and more.
+      </div>
+      <div class="snapbox-container">
+        <div class="snapbox-maxhemjee">
+          <div class="snapbox ehnii">
+            <img src="images/storebox22.jpg">
+            <div class="posi">
+              <p class="hungun">CARRIER DEALS</p>
+              <p class="harbichig">Apple. Your one-stop shop<br> for incredible carrier<br> deals.</p>
+              <p class="zun">Get up to $1000 in credit on a new<br> iPhone with AT&T, Boost Mobile,<br> T-Mobile, or
+                Verizon. Trade-in
+                may be<br> required.⁴</p>
+            </div>
+          </div>
+          <div class="snapbox ehnii">
+            <img src="images/storebox23.jpg">
+            <div class="posi">
+              <p class="hungun">EDUCATION</p>
+              <p class="harbichig">Buy a new Mac or iPad<br> with education savings.</p>
+
+            </div>
+          </div>
+          <div class="snapbox ehnii">
+            <img src="images/storebox24.jpg">
+            <div class="posi">
+              <p class="hungun">CERTIFIED REFURBISHED</p>
+              <p class="harbichig">Shop refurbished Apple <br> products backed by a<br>
+                one-year warranty.</p>
+
+            </div>
+          </div>
+          <div class="snapbox ehnii">
+            <img src="images/storebox25.jpg">
+            <div class="posi">
+              <p class="hungun">BUSINESS</p>
+              <p class="harbichig" style="color:rgba(255, 255, 255, 1);">From enterprise to <br>small business,
+                we'll<br>
+                work with you.</p>
+
+            </div>
+          </div>
+          <div class="snapbox ehnii">
+            <img src="images/storebox26.jpg">
+            <div class="posi">
+              <p class="hungun">GOVERNMENT</p>
+              <p class="harbichig">Special pricing is available<br>
+                for state, local, and federal<br>
+                agencies.</p>
+
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+    <section>
+      <div class="garchig" style="color:rgba(29, 29, 31, 1);">
+        Quick Links
+        </div>
+      <div class="footer">
+        <p>Order Status <img src="images/sum.png"></p>
+        <p>Shopping help <img src="images/sum.png"></p>
+        <p>Returns <img src="images/sum.png"></p>
+        <p>Your Saves <img src="images/sum.png"></p>
+      </div>
+    </section>
+  </main>
+
+</body>
+
+</html>

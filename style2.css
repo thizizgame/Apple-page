@@ -163,7 +163,6 @@ section {
 {
     width:100%;
     overflow: scroll;  
-    height:515px;
     padding-left:140px;
 }
 .snapbox-maxhemjee
@@ -171,6 +170,7 @@ section {
     display: flex;
     gap: 20px;
     width:5000px;
+    height:510px;
     margin-top:10px;
 }
 .snapbox
